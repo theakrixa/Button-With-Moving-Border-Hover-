@@ -1,0 +1,77 @@
+
+body{
+	background: black;
+	display: -webkit-box;
+	display: flex;
+	-webkit-box-align: center;
+	align-items: center;
+	-webkit-box-pack: center;
+	justify-content: center;
+	min-height: 100vh;
+}
+
+.btn{
+	background: none;
+	border: none;
+	cursor: pointer;
+	line-height: 1.5;
+	font: 100 1.2rem 'Roboto Slab', sans-serif;
+	padding: 1em 2em;
+	letter-spacing: 0.05rem;
+}
+
+.btn:focus{
+	outline: 2px dotted #55d7dc;
+}
+
+.draw_hover{
+	box-shadow: inset 0 0 0 4px #7cfc00;
+	color: #7cfc00;
+	transition: color 0.25s 0.8333333;
+	position: relative;
+}
+
+.draw_hover::before, .draw_hover::after{
+	border: 0 solid transparent;
+	box-sizing: border-box;
+	content: '';
+	pointer-events: none;
+	position: absolute;
+	width: 0;
+	height: 0;
+	bottom: 0;
+	right: 0;
+}
+
+.draw_hover::before{
+	border-bottom-width: 4px;
+	border-left-width: 4px;
+}
+
+.draw_hover::after{
+	border-top-width: 4px;
+	border-right-width: 4px;
+}
+
+.draw_hover:hover{
+	color: #ff0000;
+}
+
+.draw_hover:hover::before, .draw_hover:hover::after{
+	border-color: #ff0000;
+	transition: border-color 0s, width 0.25s, height 0.25s;
+	width: 100%;
+	height: 100%;
+}
+
+.draw_hover:hover::before{
+	transition-delay: 0s, 0s, 0.25s;
+}
+
+.draw_hover:hover::after{
+	transition-delay: 0s, 0.25s, 0s;
+
+
+/*HTML & CSS is completed that's why now it looks so advance and cool button hover effect button!*/
+
+/*/
